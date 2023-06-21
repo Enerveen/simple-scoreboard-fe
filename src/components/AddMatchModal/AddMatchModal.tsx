@@ -15,7 +15,7 @@ const AddMatchModal = ({onConfirm, onClose}: IAddMatchModalProps) => {
     const onAdd = useCallback(() => onConfirm({
         homeTeam: {name: teamNames.home, score: 0},
         awayTeam: {name: teamNames.away, score: 0},
-        id: `${Date.now()}`
+        id: `${Date.now()}` // using creation timestamp as a unique id
     }), [teamNames, onConfirm])
 
     return <Modal title={'Add a new match'} onClose={onClose}>

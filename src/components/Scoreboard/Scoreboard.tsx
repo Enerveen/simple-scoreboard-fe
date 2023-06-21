@@ -47,7 +47,7 @@ const Scoreboard = ({initialMatches}: IScoreboardProps) => {
 
     return <div className={classes.container}>
         <div className={classes.board}>
-            {
+            {   // I would prefer to use .toSorted() here, but it is supported only with Node 20+, so I just used destructuring instead
                 [...matches].sort((matchA, matchB) =>
                     (matchB.homeTeam.score + matchB.awayTeam.score) - (matchA.homeTeam.score + matchA.awayTeam.score))
                     .map((match => <ScoreboardItem match={match}
