@@ -1,10 +1,10 @@
+import Scoreboard from "./components/Scoreboard/Scoreboard";
+import {initialMatches} from "./constants";
+import classes from './App.module.scss'
 
 
-const App = () => {
-
-    return <div>
-        Simple scoreboard
-    </div>
-}
+const App = () => <div className={classes.container}>
+    <Scoreboard initialMatches={initialMatches}/>
+</div>
 
 export default App
